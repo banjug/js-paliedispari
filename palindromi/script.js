@@ -31,6 +31,8 @@
 let parola = prompt('Inserisci una parola.');
 
 // dichiarare la funzione per controllare il palindromo
+// creo la booleana di controllo 
+let check = false;
 function reverseWord(userWord) {
     // invertire la parola per confrontarla
     let reversed = '';
@@ -41,11 +43,19 @@ function reverseWord(userWord) {
     // // se le parole coincidono la parola è palindroma
     // // stampare se la parola è palindoma o meno 
     if (userWord == reversed) {
-        console.log('La parola è palindroma. ');
+        // cambio la booleana
+        check = true;
     } else {
-        console.log('La parola NON è palindroma');
+        check = false;
     }
 }
 
 // richiamare la funzione
 reverseWord(parola);
+
+if (check == true) {
+    console.log('La tua parola è palindroma');
+} else {
+    console.log('La tua parola NON è palindroma');
+}
+
