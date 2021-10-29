@@ -45,8 +45,6 @@ function reverseWord(userWord) {
     if (userWord == reversed) {
         // cambio la booleana
         check = true;
-    } else {
-        check = false;
     }
 }
 
