@@ -16,8 +16,8 @@
 // }
 // console.log(reversed);
 
-// // se le parole coincidono la parola è palindroma
-// // stampare se la parola è palindoma o meno 
+// se le parole coincidono la parola è palindroma
+// stampare se la parola è palindoma o meno 
 
 // if (userWord == reversed) {
 //     console.log('La parola è palindroma. ');
@@ -28,7 +28,7 @@
 // -----------------------------------------------------
 
 // inserire una parola e salvarla (variabile prompt)
-let parola = prompt('Inserisci una parola.');
+// let parola = prompt('Inserisci una parola.');
 
 // dichiarare la funzione per controllare il palindromo
 // creo la booleana di controllo 
@@ -40,20 +40,35 @@ function reverseWord(userWord) {
         reversed += userWord[i];
     }
     console.log(reversed);
-    // // se le parole coincidono la parola è palindroma
-    // // stampare se la parola è palindoma o meno 
+    // se le parole coincidono la parola è palindroma
+    // stampare se la parola è palindoma o meno 
     if (userWord == reversed) {
         // cambio la booleana
         check = true;
+    } else {
+        check = false;
     }
 }
 
 // richiamare la funzione
-reverseWord(parola);
+const btn = document.getElementById("checkBtn");
+let resultText = document.getElementById("resultContainer");
 
-if (check == true) {
-    console.log('La tua parola è palindroma');
-} else {
-    console.log('La tua parola NON è palindroma');
-}
+btn.addEventListener("click", 
+    function() {
+        let parola = document.getElementById("wordInput").value;
+
+        reverseWord(parola);
+
+        if (parola == '') {
+            resultText.innerHTML = 'Devi prima inserire una parola.';
+        } else if (check == true) {
+            resultText.innerHTML = 'La tua parola è palindroma.';
+        } else {
+            resultText.innerHTML = 'La tua parola NON è palindroma.';
+        }
+    }
+);
+
+
 
