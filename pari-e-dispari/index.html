@@ -8,6 +8,29 @@
     <title>Pari e Dispari</title>
 </head>
 <body>
+    <header>
+        <h1>Pari o Dispari?</h1>
+    </header>
+
+    <main>
+        <h2>
+            Giochiamo!
+        </h2>
+        <!-- <div class="input-container">
+            <div class="btn" id="evenBtn">Pari</div>
+            <div class="btn" id="oddBtn">Dispari</div>
+        </div> -->
+        <input type="text" id="evenInput" placeholder="Scegli pari o dispari." autocomplete="off">
+        <input type="text" id="numberInput" placeholder="Scegli un numero da 1 a 5." autocomplete="off">
+        <div class="btn" id="submitBtn">PLAY</div>
+        <div class="results-cont" id="results">
+            <span id="cpuNumOut">Il numero scelto dal computer apparir&agrave; qui.</span>
+            <span id="sumOut">La somma dei due numeri apparir&agrave; qui.</span>
+            <h3 id="winnOut">Il risultato apparir&agrave; qui.</h3>
+        </div>
+        <div id="error"></div>
+
+    </main>
     
 
     <script src="script.js"></script>
